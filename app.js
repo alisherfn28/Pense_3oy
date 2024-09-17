@@ -1,8 +1,13 @@
-// Hamburger va menyu elementlarini olamiz
-// const hamburger = document.querySelector(".header__hamburger");
-// const nav = document.querySelector(".header__nav");
+window.addEventListener("load", function () {
+  document.getElementById("loader-container").style.display = "flex";
+  let loadingTime = 0;
+  const interval = setInterval(() => {
+    loadingTime += 1;
+    if (loadingTime >= 3) {
+      clearInterval(interval);
+      document.getElementById("loader-container").style.display = "none";
 
-// // Hamburgerga bosilganda menyuni ochish/yopish funksiyasi
-// hamburger.addEventListener("click", () => {
-//   nav.classList.toggle("active"); // 'active' klassini qo'shadi yoki oladi
-// });
+      document.getElementById("index.html").style.display = "flex";
+    }
+  }, 1000);
+});

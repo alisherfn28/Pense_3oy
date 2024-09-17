@@ -20,6 +20,38 @@ ul li {
   list-style: none;
 }
 
+#loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+#content {
+  display: none;
+}
+
+.rotate {
+  width: 100px;
+  height: 100px;
+  background-color: #2ecc71;
+  animation: rotate 2s infinite linear;
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -182,7 +214,7 @@ ul li {
 .pense_container {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 50px;
   padding-top: 82px;
 }
 
@@ -445,6 +477,10 @@ ul li {
 }
 
 @media (max-width: 1200px) {
+  .truck_text h1 {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
   .track_container {
     flex-direction: column;
   }
@@ -495,7 +531,7 @@ ul li {
     }
   }
   .truck_text h1 {
-    font-size: 60px;
+    font-size: 30px;
   }
   .truck_text p {
     font-size: 18px;
@@ -526,7 +562,7 @@ ul li {
     font-size: 40px;
   }
   .alwalys_title p {
-    font-size: 15px;
+    font-size: 20px;
   }
   .alwalys_container {
     flex-direction: column;
@@ -540,9 +576,16 @@ ul li {
     }
   }
   .product_title {
-    display: flex;
     flex-direction: column;
     text-align: center;
+  }
+  .truck_text h1 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+  .truck_button {
+    flex-direction: column;
+    gap: 5px;
   }
 }
 
