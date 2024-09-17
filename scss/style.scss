@@ -1,5 +1,11 @@
 @import "../css/normalize.css";
 @import "../css/font.css";
+$white-color: #ffffff;
+$black-color: #292830;
+$bg-color: #ff7235;
+$grey-color: #292830;
+$grey2_color: #bdbdbd;
+$choose_bg_color: #fffaf8;
 * {
   padding: 0;
   margin: 0;
@@ -14,11 +20,25 @@ ul li {
   list-style: none;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .container {
   max-width: 1209px;
   margin: 0 auto;
   padding: 0 50px;
   overflow-x: hidden;
+}
+
+.header__hamburger {
+  display: none;
+  cursor: pointer;
 }
 
 .header__container {
@@ -40,15 +60,15 @@ ul li {
         font-size: 18px;
         font-weight: 400;
         line-height: 17.1px;
-        color: #292830;
+        color: $grey-color;
       }
     }
   }
   .header__btn button {
-    background-color: #ffffff;
-    border: 1px solid #ff7235;
+    background-color: $white-color;
+    border: 1px solid $bg-color;
     border-radius: 8px;
-    color: #ff7235;
+    color: $bg-color;
     padding: 16px 18px;
     font-family: "Hind Siliguri";
     font-size: 18px;
@@ -57,8 +77,8 @@ ul li {
     cursor: pointer;
     transition: 0.3s;
     &:hover {
-      background-color: #ff7235;
-      color: #ffffff;
+      background-color: $bg-color;
+      color: $white-color;
     }
     &:active {
       transform: scale(0.8);
@@ -87,7 +107,7 @@ ul li {
     font-size: 80px;
     font-weight: 700;
     line-height: 96px;
-    color: #292830;
+    color: $black-color;
     padding-bottom: 20px;
   }
   p {
@@ -95,7 +115,7 @@ ul li {
     font-size: 24px;
     font-weight: 400;
     line-height: 38.81px;
-    color: #bdbdbd;
+    color: $grey2_color;
   }
 }
 
@@ -105,8 +125,8 @@ ul li {
   font-size: 24px;
   font-weight: 400;
   line-height: 38.81px;
-  color: #ffffff;
-  background-color: #ff7235;
+  color: $white-color;
+  background-color: $bg-color;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -114,7 +134,7 @@ ul li {
   margin-top: 40px;
   &:hover {
     background-color: #f4885b;
-    color: #ffffff;
+    color: $white-color;
   }
   &:active {
     transform: scale(0.8);
@@ -141,12 +161,12 @@ ul li {
   font-size: 24px;
   font-weight: 400;
   line-height: 38.81px;
-  color: #bdbdbd;
+  color: $grey2_color;
   padding-top: 40px;
 }
 
 .overview {
-  background-color: #ff7235;
+  background-color: $bg-color;
   background-image: url(../img/bacground.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -156,6 +176,7 @@ ul li {
   max-width: 100%;
   padding-top: 80px;
   padding-bottom: 0px;
+  display: flex;
 }
 
 .pense_container {
@@ -182,7 +203,7 @@ ul li {
     font-size: 22px;
     font-weight: 400;
     line-height: 35.57px;
-    color: #bdbdbd;
+    color: $grey2_color;
     padding-top: 140px;
     padding-bottom: 24px;
   }
@@ -190,7 +211,7 @@ ul li {
     font-family: Hind Siliguri;
     font-size: 70px;
     font-weight: 700;
-    color: #292830;
+    color: $black-color;
     padding-bottom: 24px;
   }
   p {
@@ -198,7 +219,7 @@ ul li {
     font-size: 24px;
     font-weight: 400;
     line-height: 38.81px;
-    color: #bdbdbd;
+    color: $grey2_color;
     padding-bottom: 24px;
   }
   a {
@@ -207,7 +228,7 @@ ul li {
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    color: #ff7235;
+    color: $bg-color;
   }
 }
 
@@ -226,7 +247,7 @@ ul li {
   font-family: Hind Siliguri;
   font-size: 90px;
   font-weight: 700;
-  color: #292830;
+  color: $grey-color;
 }
 
 .product_title p {
@@ -234,13 +255,13 @@ ul li {
   font-size: 24px;
   font-weight: 400;
   line-height: 38.81px;
-  color: #bdbdbd;
+  color: $grey2_color;
   margin-left: 100px;
   max-width: 350px;
 }
 
 .product {
-  background-color: #fffaf8;
+  background-color: $white-color;
 }
 
 .product_card {
@@ -253,7 +274,7 @@ ul li {
   border-radius: 20px;
   cursor: pointer;
   &:hover {
-    background-color: #ffffff;
+    background-color: $white-color;
     -webkit-box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
     -moz-box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
     box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
@@ -269,9 +290,20 @@ ul li {
   font-weight: 500;
   line-height: 30px;
   text-align: center;
-  color: #292830;
+  color: $black-color;
   padding-top: 24px;
   padding-bottom: 14px;
+}
+
+.pense_container img {
+  filter: grayscale(100%);
+  opacity: 0.25;
+  transition: all 0.4s ease-in-out;
+}
+
+.pense_container img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 .product_card p {
@@ -279,7 +311,11 @@ ul li {
   font-size: 20px;
   font-weight: 400;
   line-height: 22.64px;
-  color: #bdbdbd;
+  color: $grey2_color;
+}
+
+.product {
+  padding-bottom: 130px;
 }
 
 .product_card img {
@@ -290,6 +326,122 @@ ul li {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+
+.choose {
+  background-color: $choose_bg_color;
+}
+
+.choose_title h2 {
+  font-family: Hind Siliguri;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.card_a a {
+  font-family: Hind Siliguri;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29.11px;
+  text-align: left;
+  color: $black-color;
+}
+
+.card_href {
+  padding-bottom: 15px;
+}
+
+.choose_cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.choose_card {
+  padding-bottom: 30px;
+  max-width: 350px;
+  padding: 41px 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $white-color;
+    -webkit-box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
+    box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
+  }
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.choose_card h3 {
+  font-family: Hind Siliguri;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 51.74px;
+  text-align: left;
+  color: $black-color;
+}
+
+.choose_card h4 {
+  font-family: Hind Siliguri;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 38.81px;
+  text-align: left;
+  color: $black-color;
+  span {
+    font-family: Hind Siliguri;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32.34px;
+    text-align: left;
+    color: $grey2_color;
+  }
+}
+
+.choose_card h6 {
+  font-family: Hind Siliguri;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.4px;
+  color: $grey2_color;
+  padding-bottom: 20px;
+}
+
+.choose_button {
+  font-family: Hind Siliguri;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.87px;
+  text-align: left;
+  color: $bg-color;
+  padding: 6px 5px;
+  border: 1px solid $bg-color;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    background-color: $bg-color;
+    color: $white-color;
+  }
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.choose_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 @media (max-width: 1200px) {
@@ -336,6 +488,11 @@ ul li {
 @media (max-width: 900px) {
   .header__btn button {
     display: none;
+  }
+  .header__container {
+    .header__nav {
+      display: flex;
+    }
   }
   .truck_text h1 {
     font-size: 60px;
@@ -390,6 +547,9 @@ ul li {
 }
 
 @media (max-width: 576px) {
+  .header__hamburger {
+    display: block;
+  }
   .truck_text h1 {
     font-size: 60px;
   }
@@ -410,6 +570,15 @@ ul li {
   .product_title p {
     padding-right: 80px;
   }
+  .truck_button button {
+    font-size: 10px;
+    padding: 7px 10px;
+  }
+  .header__container {
+    .header__nav {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 535px) {
@@ -429,6 +598,9 @@ ul li {
   .truck_text h1 {
     line-height: 20px;
     font-size: 20px;
+  }
+  .header__nav {
+    display: none;
   }
   .truck_text p {
     font-size: 8px;

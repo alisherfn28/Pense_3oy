@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link
+      rel="shortcut icon"
+      href="./img/favicon-logo.png"
+      type="image/x-icon"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      s
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -32,6 +38,13 @@
         <div class="header__btn">
           <button>Request a demo</button>
         </div>
+        <div class="header__hamburger">
+          <img
+            src="./img/hamburger-menu-svgrepo-com.svg"
+            alt="hamburger"
+            width="24"
+          />
+        </div>
       </div>
     </header>
     <div class="track">
@@ -50,7 +63,7 @@
             </div>
           </div>
         </div>
-        <div class="track_img">
+        <div class="track_img" data-aos="flip-down">
           <img
             src="./img/user_img.png"
             srcset="./img/user_img.png, ./img/user_img@2x.png 2x"
@@ -73,19 +86,19 @@
     <section class="pense_icon">
       <div class="pense_container container">
         <a href="https://www.facebook.com/"
-          ><img src="./img/facebook.svg" alt="facebook"
+          ><img src="./img/facebook.jpg" alt="facebook"
         /></a>
         <a href="https://www.google.co.uk/"
-          ><img src="./img/google.svg" alt="google"
+          ><img src="./img/goole.jpg" alt="google"
         /></a>
         <a href="https://www.coca-cola.com/uz/ru"
-          ><img src="./img/cocacola.svg" alt="cocacola"
+          ><img src="./img/coca_cola.png" alt="cocacola"
         /></a>
         <a href="https://uz.linkedin.com/"
-          ><img src="./img/linkedin.svg" alt="linkedin"
+          ><img src="./img/linkedin.jpg" alt="linkedin"
         /></a>
         <a href="https://www.samsung.com/us/"
-          ><img src="./img/samsung.svg" alt=""
+          ><img src="./img/samsung.jpg" alt=""
         /></a>
       </div>
     </section>
@@ -179,5 +192,91 @@
         </div>
       </div>
     </section>
+    <div class="choose">
+      <div class="choose_container container">
+        <div class="choose_title">
+          <h2>Choose your flexible plan.</h2>
+        </div>
+        <div class="choose_cards">
+          <div class="choose_card">
+            <img src="./img/blue_bag.svg" alt="" />
+            <h3>Starter Plan</h3>
+            <div class="card_href">
+              <div class="card_a">
+                ✓
+                <a href="#">Store unlimited data</a>
+              </div>
+              <div class="card_a">
+                ✓
+                <a href="#">Export to pdf, xls, csv</a>
+              </div>
+              <div class="card_a">
+                ✓
+                <a href="#">Cloud server support</a>
+              </div>
+            </div>
+            <h4>$9.99/<span>year</span></h4>
+            <h6>up to 3 user + 1.99 per user</h6>
+            <div class="choose_button">
+              <div>Get this</div>
+              <img src="./img/Vector_strelka.svg" alt="" />
+            </div>
+          </div>
+          <div class="choose_card">
+            <img src="./img/yello0w_bag.svg" alt="" />
+            <h3>Sliver Plan</h3>
+            <div class="card_href">
+              <div class="card_a">
+                ✓
+                <a href="# ">Store unlimited data</a>
+              </div>
+              <div class="card_a">
+                ✓
+                <a href="# ">Export to pdf, xls, csv</a>
+              </div>
+              <div class="card_a">
+                ✓
+                <a href="# ">Cloud server support</a>
+              </div>
+            </div>
+            <h4>$19.99/<span>year</span></h4>
+            <h6>up to 3 user + 1.99 per user</h6>
+            <div class="choose_button">
+              <div>Get this</div>
+              <img src="./img/Vector_strelka.svg " alt=" " />
+            </div>
+          </div>
+          <div class="choose_card">
+            <img src="./img/Icons_card_3.svg" alt=" " />
+            <h3>Diamond Plan</h3>
+            <div class="card_href">
+              <div class="card_a">
+                ✓
+                <a href="# ">Store unlimited data</a>
+              </div>
+              <div class="card_a">
+                ✓
+                <a href="# ">Export to pdf, xls, csv</a>
+              </div>
+              <div class="card_a">
+                ✓
+                <a href="# ">Cloud server support</a>
+              </div>
+            </div>
+            <h4>$29.99/<span>year</span></h4>
+            <h6>up to 3 user + 1.99 per user</h6>
+            <div class="choose_button">
+              <div>Get this</div>
+              <img src="./img/Vector_strelka.svg " alt=" " />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./app.js "></script>
   </body>
 </html>
