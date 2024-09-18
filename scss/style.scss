@@ -395,8 +395,9 @@ ul li {
 
 .choose_card {
   padding-bottom: 30px;
-  max-width: 350px;
+  max-width: 700px;
   padding: 41px 60px;
+  text-align: left;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
@@ -406,9 +407,14 @@ ul li {
     -moz-box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
     box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
   }
-  &:active {
-    transform: scale(0.8);
-  }
+}
+
+.alwalys_img img:nth-child(2) {
+  padding-left: -30px;
+}
+
+.vector {
+  display: none;
 }
 
 .choose_card h3 {
@@ -463,6 +469,12 @@ ul li {
   &:hover {
     background-color: $bg-color;
     color: $white-color;
+    .vector {
+      display: block;
+    }
+    .vector1 {
+      display: none;
+    }
   }
   &:active {
     transform: scale(0.8);
@@ -474,6 +486,38 @@ ul li {
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+
+.choose {
+  padding-bottom: 100px;
+}
+
+.scroll_img {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.scroll_img img {
+  &:hover {
+    -webkit-box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
+    box-shadow: 9px 7px 14px 4px rgba(0, 0, 0, 0.67);
+  }
+}
+
+.scrool_bottom img {
+  pedding-left: 500px;
+  pedding-top: 50px;
+}
+
+.scroll_title h2 {
+  font-family: Hind Siliguri;
+  font-size: 90px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 80px;
+  color: $grey-color;
 }
 
 @media (max-width: 1200px) {
@@ -494,6 +538,12 @@ ul li {
   .product_title h2 {
     font-size: 60px;
     font-weight: 500;
+  }
+  .choose_cards {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
   }
 }
 
@@ -519,6 +569,14 @@ ul li {
   .track {
     padding-bottom: 50px;
   }
+  .product_title {
+    flex-direction: column;
+  }
+  .product_title p {
+    font-size: 25px;
+    padding-top: 7px;
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -531,7 +589,7 @@ ul li {
     }
   }
   .truck_text h1 {
-    font-size: 30px;
+    font-size: 15px;
   }
   .truck_text p {
     font-size: 18px;
@@ -550,7 +608,7 @@ ul li {
     max-width: 100px;
   }
   .product_title h2 {
-    font-size: 80px;
+    font-size: 60px;
   }
   .alwalys_container {
     flex-direction: column;
@@ -587,6 +645,14 @@ ul li {
     flex-direction: column;
     gap: 5px;
   }
+  .product_c {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .choose_title h2 {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -622,6 +688,9 @@ ul li {
       display: none;
     }
   }
+  .alwalys_title h4 {
+    padding-top: 50px;
+  }
 }
 
 @media (max-width: 535px) {
@@ -639,8 +708,7 @@ ul li {
 
 @media (max-width: 400px) {
   .truck_text h1 {
-    line-height: 20px;
-    font-size: 20px;
+    font-size: 35px;
   }
   .header__nav {
     display: none;
